@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".NotificationActivity">
+
+    <TextView
+        android:id="@+id/notificationHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="NOTIFICATIONS"
+        android:textColor="@color/maincolor"
+        android:textSize="25dp"
+        android:fontFamily="@font/amiko"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/notificationList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/notificationHeading"
+        android:layout_above="@+id/notiBottomBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/notificationProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notificationHeading"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/notiBottomBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentBottom="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/home2"
+                android:onClick="notiToHome"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/profile2"
+                android:onClick="notiToProfile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/notification1"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

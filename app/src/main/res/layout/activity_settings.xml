@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/settingsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="SETTINGS"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/amiko"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/maincolor"/>
+
+    <Button
+        android:id="@+id/settingeditPersonalDetails"
+        android:layout_below="@id/settingsHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Edit personal details"
+        android:layout_marginTop="40dp"
+        android:textColor="#000"
+        android:background="@drawable/plain_button"/>
+
+    <Button
+        android:id="@+id/settingeditPersonalpicture"
+        android:layout_below="@id/settingeditPersonalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Edit profile picture"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:background="@drawable/plain_button"/>
+
+    <Button
+        android:id="@+id/settingesLogout"
+        android:layout_below="@id/settingeditPersonalpicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="LOG out"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:background="@drawable/plain_button"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESIGNED / MADE BY : "
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOCUS Inc."
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="240dp"/>
+
+
+</RelativeLayout>

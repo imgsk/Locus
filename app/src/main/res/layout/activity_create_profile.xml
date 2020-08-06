@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".CreateProfileActivity">
+
+    <ImageView
+        android:id="@+id/createProfileHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/locuswrite"/>
+
+
+    <Button
+        android:id="@+id/createProfileselectImage"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/createProfiletext"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/red_button"
+        android:textColor="#fff"
+        android:text="Select Image"/>
+
+    <Button
+        android:id="@+id/createProfileSkip"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/plain_button"
+        android:layout_below="@id/createProfiletext"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:text="SKIP"
+        android:textColor="#000"/>
+
+    <ImageView
+        android:id="@+id/createProfileprofile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="addProfilePic"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/createProfileHeading"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/createProfiletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Profile Picture"
+        android:layout_below="@id/createProfileprofile"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"/>
+
+
+
+
+</RelativeLayout>

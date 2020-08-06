@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".RequestActivity">
+
+    <TextView
+        android:id="@+id/addFriendHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="USER PROFILE"
+        android:textColor="@color/maincolor"
+        android:textSize="20dp"
+        android:fontFamily="@font/amiko"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/addFriendProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/profile"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/addFriendHeading"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/addFriendsFriends"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textColor="#fff"
+        android:text="Friends"
+        android:background="@drawable/blue_button"
+        android:layout_below="@id/addFriendHeading"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="160dp"/>
+
+    <Button
+        android:id="@+id/addFriendsNoofFriends"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@drawable/small_red_button"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/addFriendHeading"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/addFriendsFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_below="@+id/addFriendProfile"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/addFriendsUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textColor="@color/hintcolor"
+        android:layout_below="@id/addFriendsFullName"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/addFriendsBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your One Line Bio Goes here!"
+        android:textColor="#fff"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/addFriendsUserName"
+        android:textSize="17dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/addFriendsSEND"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/blue_button"
+        android:text="SEND REQUEST"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addFriendsBio"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/addFriendsUNSEND"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/red_button"
+        android:text="UNSEND REQUEST"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addFriendsBio"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/addFriendText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept Friend Request?"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:fontFamily="@font/amiko"
+        android:layout_below="@id/addFriendsBio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/addFriendACCEPTbtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/green_button"
+        android:text="ACCEPT"
+        android:textColor="#fff"
+        android:layout_below="@id/addFriendText"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/addFriendREJECTbtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/red_button"
+        android:text="REJECT"
+        android:textColor="#fff"
+        android:layout_below="@id/addFriendText"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/unfriendBtn"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/plain_button"
+        android:text="UNFRIEND"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addFriendsBio"
+        android:layout_marginTop="40dp"/>
+
+
+</RelativeLayout>

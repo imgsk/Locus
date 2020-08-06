@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/profileHeading"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/profileheading"/>
+
+    <ImageView
+        android:id="@+id/profileSettings"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:src="@drawable/settings1"
+        android:onClick="profileToSettings"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="invisible"
+        android:id="@+id/profileProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/profile"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/profileHeading"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/profileFriends"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textColor="#fff"
+        android:text="Friends"
+        android:background="@drawable/blue_button"
+        android:layout_below="@id/profileHeading"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="160dp"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/profileNoofFriends"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@drawable/small_red_button"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/profileHeading"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/profileFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_below="@+id/profileProfile"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/profileUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textColor="@color/hintcolor"
+        android:layout_below="@id/profileFullName"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/profileBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your One Line Bio Goes here!"
+        android:textColor="#fff"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/profileUserName"
+        android:textSize="17dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestionsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/profileBottomToolbar"
+        android:layout_below="@+id/profileBio"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileBottomToolbar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentBottom="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/home2"
+                android:onClick="goToHome"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/profile1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/notification2"
+                android:onClick="goToNoti"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

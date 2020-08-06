@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/homeHeading"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/locuswrite"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/searchmain"
+                android:onClick="homeToSearch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/homeprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_below="@+id/homeHeading"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="100dp">
+
+        <fragment
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/activeFriends"
+            android:layout_below="@+id/homeHeading"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/refreshButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_marginBottom="110dp"
+        android:src="@drawable/refresh"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/goOffline"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/green_button"
+        android:textColor="#fff"
+        android:text="GO OFFLINE" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/goOnline"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/red_button"
+        android:textColor="#fff"
+        android:text="GO ONLINE" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS: Online"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_marginBottom="70dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/activeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="ACTIVE: 8"
+        android:layout_above="@+id/homeBottomBar"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/homeBottomBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentBottom="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/home1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/profile2"
+                android:onClick="homeToProfile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/notification2"
+                android:onClick="homeToNoti"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

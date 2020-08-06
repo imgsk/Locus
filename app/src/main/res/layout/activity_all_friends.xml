@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".AllFriendsActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/leftarrow"
+        android:onClick="allFriendsToProfile"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/allFriendHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="FRIENDS"
+        android:textColor="@color/maincolor"
+        android:textSize="25dp"
+        android:fontFamily="@font/amiko"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allFriendList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/allFriendHeading"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

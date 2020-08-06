@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backround"
+    tools:context=".SignOutActivity">
+
+    <ImageView
+        android:id="@+id/logoutHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/locuswrite"/>
+
+    <TextView
+        android:id="@+id/logoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="Are you sure you want to LOG OUT?"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logoutHeading"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/createProfileselectImage"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/logoutText"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:onClick="logoutUser"
+        android:background="@drawable/green_button"
+        android:textColor="#fff"
+        android:layout_marginBottom="30dp"
+        android:text="LOG OUT"/>
+
+    <Button
+        android:id="@+id/createProfileSkip"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/red_button"
+        android:layout_below="@id/logoutText"
+        android:onClick="cancelLogout"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:text="CANCEL"
+        android:layout_marginBottom="30dp"
+        android:textColor="#fff"/>
+
+
+
+
+</RelativeLayout>
